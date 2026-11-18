@@ -1,1 +1,60 @@
-index.html
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e52323">
+<title>Доставка шустрая</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5f5f5;font-family:Arial,sans-serif;color:#222}
+header{background:#e52323;color:white;padding:24px 18px;border-radius:0 0 22px 22px}
+header h1{margin:0;font-size:26px}
+header p{margin:8px 0 0}
+main{padding:18px}
+h2{font-size:20px}
+.item{background:white;padding:14px;border-radius:16px;margin:12px 0;display:flex;justify-content:space-between;align-items:center}
+button{background:#e52323;color:white;border:0;border-radius:12px;padding:12px 17px;font-weight:bold}
+.cart{background:#222;color:white;padding:18px;border-radius:16px;margin-top:20px}
+.cart button{width:100%;margin-top:12px}
+.price{font-weight:bold}
+</style>
+</head>
+<body>
+<header>
+<h1>⚡ Доставка шустрая</h1>
+<p>Быстрая доставка по Дербенту!</p>
+</header>
+<main>
+<h2>Популярные блюда</h2>
+<div class="item">
+<div>🍕 <b>Пицца Пепперони</b><br>650 ₽</div>
+<button onclick="add()">Добавить</button>
+</div>
+<div class="item">
+<div>🍔 <b>Классический бургер</b><br>420 ₽</div>
+<button onclick="add()">Добавить</button>
+</div>
+<div class="item">
+<div>🍣 <b>Сет Филадельфия</b><br>890 ₽</div>
+<button onclick="add()">Добавить</button>
+</div>
+<div class="cart">
+<h3>🛒 Корзина</h3>
+<p id="count">Товаров: 0</p>
+<p id="total">Сумма: 0 ₽</p>
+<button onclick="alert('Это демонстрационный заказ!')">Оформить заказ</button>
+</div>
+</main>
+<script>
+let count=0,total=0;
+function add(){
+count++;total+=650;
+document.getElementById('count').innerText='Товаров: '+count;
+document.getElementById('total').innerText='Сумма: '+total+' ₽';
+}
+</script>
+</body>
+</html>
+
